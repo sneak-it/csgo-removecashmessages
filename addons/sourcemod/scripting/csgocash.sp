@@ -15,7 +15,7 @@ public void OnPluginStart()
 	HookUserMessage(GetUserMessageId("TextMsg"), RemoveMessage, true);
 }
 
-public Action RemoveMessage(UserMsg msg_id, Handle msg, const char[] players, int playersNum, bool reliable, bool init)
+public Action RemoveMessage(UserMsg msg_id, BfRead msg, const int[] players, int playersNum, bool reliable, bool init)
 {
 	char buffer[64];
 	PbReadString(msg, "params", buffer, sizeof(buffer), 0);
