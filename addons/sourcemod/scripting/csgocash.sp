@@ -1,22 +1,23 @@
 #include <sourcemod>
+#pragma newdecls required
 
-public Plugin:myinfo = 
+public Plugin myinfo = 
 {
-	name = "Remove Cash Messages (CS:GO)", 
-	author = "blackhawk74/sneaK", 
-	version = "1.1",
+	name = "Remove Cash & Points Messages (CS:GO)", 
+	author = "sneaK", 
+	version = "1.2",
 	description = "Disables certain messages in chat",
-	url = "http://snksrv.com"
+	url = "https://snksrv.com"
 };
 
-public OnPluginStart()
+public void OnPluginStart()
 {
-	HookUserMessage(GetUserMessageId("TextMsg"), MsgHook_AdjustMoney, true);
+	HookUserMessage(GetUserMessageId("TextMsg"), RemoveMessage, true);
 }
 
-public Action:MsgHook_AdjustMoney(UserMsg:msg_id, Handle:msg, const players[], playersNum, bool:reliable, bool:init)
+public Action RemoveMessage(UserMsg msg_id, Handle msg, const char[] players, int playersNum, bool reliable, bool init)
 {
-	decl String:buffer[64];
+	char buffer[64];
 	PbReadString(msg, "params", buffer, sizeof(buffer), 0);
 	
 	if (StrEqual(buffer, "#Player_Cash_Award_Killed_Enemy"))
