@@ -180,5 +180,41 @@ public Action RemoveMessage(UserMsg msg_id, BfRead msg, const int[] players, int
 	{
 		return Plugin_Handled;
 	}
+	if (StrEqual(buffer, "#Player_Team_Award_Killed_Enemy"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrEqual(buffer, "#Player_Team_Award_Killed_Enemy_Plural"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrEqual(buffer, "#Player_Team_Award_Bonus_Weapon"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrEqual(buffer, "#Player_Team_Award_Bonus_Weapon_Plural"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrEqual(buffer, "#Player_Team_Award_Bonus_Weapon_Plural"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrEqual(buffer, "#Team_Cash_Award_Survive_GuardianMode_Wave"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrEqual(buffer, "#Player_Point_Award_Killed_Enemy_NoWeapon"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrEqual(buffer, "#Player_Point_Award_Killed_Enemy_NoWeapon_Plural"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrEqual(buffer, "#Player_Point_Award_Killed_Enemy_NoWeapon_Plural"))
+	{
+		return Plugin_Handled;
+	}
 	return Plugin_Continue;
 }
