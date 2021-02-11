@@ -36,5 +36,21 @@ public Action RemoveMessage(UserMsg msg_id, BfRead msg, const int[] players, int
 	{
 		return Plugin_Handled;
 	}
+	if (StrContains(buffer, "#Team_Cash_Award_Bonus_Shorthanded"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrContains(buffer, "#Notice_Bonus_Shorthanded_Eligibility"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrContains(buffer, "#Notice_Bonus_Shorthanded_Eligibility_Single"))
+	{
+		return Plugin_Handled;
+	}
+	if (StrContains(buffer, "#Notice_Bonus_Enemy_Team"))
+	{
+		return Plugin_Handled;
+	}
 	return Plugin_Continue;
 }
