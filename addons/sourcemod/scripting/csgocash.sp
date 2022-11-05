@@ -5,7 +5,7 @@ public Plugin myinfo =
 {
 	name = "Remove Cash & Points Messages (CS:GO)", 
 	author = "sneaK", 
-	version = "1.4",
+	version = "1.5",
 	description = "Disables certain messages in chat",
 	url = "https://snksrv.com"
 };
