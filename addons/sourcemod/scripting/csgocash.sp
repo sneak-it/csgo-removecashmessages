@@ -36,5 +36,9 @@ public Action RemoveMessage(UserMsg msg_id, BfRead msg, const int[] players, int
 	{
 		return Plugin_Handled;
 	}
+	if (StrContains(buffer, "#Notice_Bonus"))
+	{
+		return Plugin_Handled;
+	}
 	return Plugin_Continue;
 }
